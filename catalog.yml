@@ -1,0 +1,6 @@
+version: 1
+unique_name: 'oneclickmodel'
+object_type: catalog
+label: 'hub: 10tb'
+aggressive_agg_promotion: false
+build_speculative_aggs: false
