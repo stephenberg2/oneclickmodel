@@ -1,0 +1,6 @@
+unique_name: Arr_sum
+object_type: metric
+label: Arr_sum
+calculation_method: sum
+column: ARR
+dataset: example_input_file_for_at_scale

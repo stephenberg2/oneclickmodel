@@ -1,0 +1,18 @@
+unique_name: Product
+object_type: dimension
+label: Product
+hierarchies:
+  - unique_name: Product_Hierarchy
+    label: Product Hierarchy
+    levels:
+      - unique_name: Product_Level
+is_degenerate: true
+level_attributes:
+  - unique_name: Product_Level
+    label: Product Level
+    contains_unique_names: false
+    dataset: example_input_file_for_at_scale
+    key_columns:
+      - Product
+    name_column: Product
+type: standard

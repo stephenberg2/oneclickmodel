@@ -1,0 +1,18 @@
+unique_name: Product_Basket_Change_Class
+object_type: dimension
+label: Product_Basket_Change_Class
+hierarchies:
+  - unique_name: Product_Basket_Change_Class_Hierarchy
+    label: Product Basket Change Class Hierarchy
+    levels:
+      - unique_name: Product_Basket_Change_Class_Level
+is_degenerate: true
+level_attributes:
+  - unique_name: Product_Basket_Change_Class_Level
+    label: Product Basket Change Class Level
+    contains_unique_names: false
+    dataset: example_input_file_for_at_scale
+    key_columns:
+      - Product Basket Change Class
+    name_column: Product Basket Change Class
+type: standard

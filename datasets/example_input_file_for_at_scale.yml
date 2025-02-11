@@ -1,0 +1,65 @@
+unique_name: example_input_file_for_at_scale
+object_type: dataset
+label: example_input_file_for_at_scale
+columns:
+  - name: Product
+    data_type: string
+  - name: __invoice_number__
+    data_type: string
+  - name: __vertical__
+    data_type: string
+  - name: Customer
+    data_type: string
+  - name: Start Date
+    data_type: date
+  - name: End Date
+    data_type: date
+  - name: RevenueDate_out
+    data_type: date
+  - name: trunc_revenue_date
+    data_type: date
+  - name: ARR
+    data_type: double
+  - name: run_rate_py
+    data_type: double
+  - name: run_rate_pq
+    data_type: double
+  - name: run_rate_pm
+    data_type: double
+  - name: CohortAnnual
+    data_type: string
+  - name: CohortQuarterly
+    data_type: string
+  - name: Cohort Annual Start Date
+    data_type: date
+  - name: Cohort Quarterly Start Date
+    data_type: date
+  - name: Cohort Timeline (Annual)
+    data_type: long
+  - name: Cohort Timeline (Quarterly)
+    data_type: long
+  - name: PreWaterfallID_out
+    data_type: long
+  - name: RecordType_out
+    data_type: string
+  - name: Renewal Date
+    data_type: date
+  - name: up_for_renewal
+    data_type: boolean
+  - name: up_for_renewal_wrapper
+    data_type: string
+  - name: Count of Products in Basket
+    data_type: long
+  - name: Prior Year Product Basket
+    data_type: string
+  - name: Prior Year Count of Products in Basket
+    data_type: long
+  - name: Current Year Product Basket
+    data_type: string
+  - name: Basket Size String
+    data_type: string
+  - name: Product Basket Change Class
+    data_type: string
+connection_id: connection_example_input_file_for_at_scale
+database: atscale_sample_data
+table: example_input_file_for_at_scale

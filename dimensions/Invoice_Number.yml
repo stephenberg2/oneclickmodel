@@ -1,0 +1,18 @@
+unique_name: Invoice_Number
+object_type: dimension
+label: Invoice_Number
+hierarchies:
+  - unique_name: Invoice_Number_Hierarchy
+    label: Invoice Number Hierarchy
+    levels:
+      - unique_name: Invoice_Number_Level
+is_degenerate: true
+level_attributes:
+  - unique_name: Invoice_Number_Level
+    label: Invoice Number Level
+    contains_unique_names: false
+    dataset: example_input_file_for_at_scale
+    key_columns:
+      - __invoice_number__
+    name_column: __invoice_number__
+type: standard

@@ -1,0 +1,18 @@
+unique_name: Current_Year_Product_Basket
+object_type: dimension
+label: Current_Year_Product_Basket
+hierarchies:
+  - unique_name: Current_Year_Product_Basket_Hierarchy
+    label: Current Year Product Basket Hierarchy
+    levels:
+      - unique_name: Current_Year_Product_Basket_Level
+is_degenerate: true
+level_attributes:
+  - unique_name: Current_Year_Product_Basket_Level
+    label: Current Year Product Basket Level
+    contains_unique_names: false
+    dataset: example_input_file_for_at_scale
+    key_columns:
+      - Current Year Product Basket
+    name_column: Current Year Product Basket
+type: standard

@@ -1,0 +1,18 @@
+unique_name: Record_Type_Out
+object_type: dimension
+label: Record_Type_Out
+hierarchies:
+  - unique_name: Record_Type_Out_Hierarchy
+    label: Record Type Out Hierarchy
+    levels:
+      - unique_name: Record_Type_Out_Level
+is_degenerate: true
+level_attributes:
+  - unique_name: Record_Type_Out_Level
+    label: Record Type Out Level
+    contains_unique_names: false
+    dataset: example_input_file_for_at_scale
+    key_columns:
+      - RecordType_out
+    name_column: RecordType_out
+type: standard

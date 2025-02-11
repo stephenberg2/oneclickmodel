@@ -1,0 +1,103 @@
+unique_name: New Model
+object_type: model
+label: New Model
+dimensions:
+  - Product
+  - Invoice_Number
+  - Versiontical
+  - Customer
+  - Coho_Rate_Annual
+  - Coho_Rate_Quarterly
+  - Record_Type_Out
+  - Up_For_Renewal_Wrap_Per
+  - Prior_Year_Product_Basket
+  - Current_Year_Product_Basket
+  - Basket_Size_String
+  - Product_Basket_Change_Class
+metrics:
+  - unique_name: Arr_sum
+  - unique_name: Run_Rate_Py_sum
+  - unique_name: Run_Rate_Pq_sum
+  - unique_name: Run_Rate_Pm_sum
+  - unique_name: Coho_Rate_Time_Line_(_Annual)_sum
+  - unique_name: Coho_Rate_Time_Line_(_Quarterly)_sum
+  - unique_name: Pre_Waterf_All_Id_Out_sum
+  - unique_name: Count_Of_Products_In_Basket_sum
+  - unique_name: Prior_Year_Count_Of_Products_In_Basket_sum
+relationships:
+  - unique_name: >-
+      example_input_file_for_at_scale_Start Date_to_Date Dimension
+      Generated_DayMonth
+    from:
+      dataset: example_input_file_for_at_scale
+      join_columns:
+        - Start Date
+    to:
+      dimension: Date Dimension Generated
+      level: DayMonth
+  - unique_name: >-
+      example_input_file_for_at_scale_End Date_to_Date Dimension
+      Generated_DayMonth_End
+    from:
+      dataset: example_input_file_for_at_scale
+      join_columns:
+        - End Date
+    role_play: End {0}
+    to:
+      dimension: Date Dimension Generated
+      level: DayMonth
+  - unique_name: >-
+      example_input_file_for_at_scale_RevenueDate_out_to_Date Dimension
+      Generated_DayMonth_Revenue_out
+    from:
+      dataset: example_input_file_for_at_scale
+      join_columns:
+        - RevenueDate_out
+    role_play: Revenue_out {0}
+    to:
+      dimension: Date Dimension Generated
+      level: DayMonth
+  - unique_name: >-
+      example_input_file_for_at_scale_trunc_revenue_date_to_Date Dimension
+      Generated_DayMonth_Trunc_revenue_
+    from:
+      dataset: example_input_file_for_at_scale
+      join_columns:
+        - trunc_revenue_date
+    role_play: Trunc_revenue_ {0}
+    to:
+      dimension: Date Dimension Generated
+      level: DayMonth
+  - unique_name: >-
+      example_input_file_for_at_scale_Cohort Annual Start Date_to_Date Dimension
+      Generated_DayMonth_Cohort annual start
+    from:
+      dataset: example_input_file_for_at_scale
+      join_columns:
+        - Cohort Annual Start Date
+    role_play: Cohort annual start {0}
+    to:
+      dimension: Date Dimension Generated
+      level: DayMonth
+  - unique_name: >-
+      example_input_file_for_at_scale_Cohort Quarterly Start Date_to_Date
+      Dimension Generated_DayMonth_Cohort quarterly start
+    from:
+      dataset: example_input_file_for_at_scale
+      join_columns:
+        - Cohort Quarterly Start Date
+    role_play: Cohort quarterly start {0}
+    to:
+      dimension: Date Dimension Generated
+      level: DayMonth
+  - unique_name: >-
+      example_input_file_for_at_scale_Renewal Date_to_Date Dimension
+      Generated_DayMonth_Renewal
+    from:
+      dataset: example_input_file_for_at_scale
+      join_columns:
+        - Renewal Date
+    role_play: Renewal {0}
+    to:
+      dimension: Date Dimension Generated
+      level: DayMonth

@@ -1,0 +1,18 @@
+unique_name: Versiontical
+object_type: dimension
+label: Versiontical
+hierarchies:
+  - unique_name: Versiontical_Hierarchy
+    label: Versiontical Hierarchy
+    levels:
+      - unique_name: Versiontical_Level
+is_degenerate: true
+level_attributes:
+  - unique_name: Versiontical_Level
+    label: Versiontical Level
+    contains_unique_names: false
+    dataset: example_input_file_for_at_scale
+    key_columns:
+      - __vertical__
+    name_column: __vertical__
+type: standard

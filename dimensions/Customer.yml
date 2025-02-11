@@ -1,0 +1,18 @@
+unique_name: Customer
+object_type: dimension
+label: Customer
+hierarchies:
+  - unique_name: Customer_Hierarchy
+    label: Customer Hierarchy
+    levels:
+      - unique_name: Customer_Level
+is_degenerate: true
+level_attributes:
+  - unique_name: Customer_Level
+    label: Customer Level
+    contains_unique_names: false
+    dataset: example_input_file_for_at_scale
+    key_columns:
+      - Customer
+    name_column: Customer
+type: standard

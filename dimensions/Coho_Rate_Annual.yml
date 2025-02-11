@@ -1,0 +1,18 @@
+unique_name: Coho_Rate_Annual
+object_type: dimension
+label: Coho_Rate_Annual
+hierarchies:
+  - unique_name: Coho_Rate_Annual_Hierarchy
+    label: Coho Rate Annual Hierarchy
+    levels:
+      - unique_name: Coho_Rate_Annual_Level
+is_degenerate: true
+level_attributes:
+  - unique_name: Coho_Rate_Annual_Level
+    label: Coho Rate Annual Level
+    contains_unique_names: false
+    dataset: example_input_file_for_at_scale
+    key_columns:
+      - CohortAnnual
+    name_column: CohortAnnual
+type: standard

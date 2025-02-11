@@ -1,0 +1,18 @@
+unique_name: Basket_Size_String
+object_type: dimension
+label: Basket_Size_String
+hierarchies:
+  - unique_name: Basket_Size_String_Hierarchy
+    label: Basket Size String Hierarchy
+    levels:
+      - unique_name: Basket_Size_String_Level
+is_degenerate: true
+level_attributes:
+  - unique_name: Basket_Size_String_Level
+    label: Basket Size String Level
+    contains_unique_names: false
+    dataset: example_input_file_for_at_scale
+    key_columns:
+      - Basket Size String
+    name_column: Basket Size String
+type: standard

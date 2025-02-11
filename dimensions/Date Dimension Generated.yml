@@ -1,0 +1,183 @@
+unique_name: Date Dimension Generated
+object_type: dimension
+label: Date Dimension Generated
+description: Date Dimension for ISO8601 calendar with 2 hierarchies
+hierarchies:
+  - unique_name: Date Month Hierarchy
+    label: Date Month Hierarchy
+    description: A Gregorian Date Hierarchy.  Organizes time by Year, Quarter, Month, Day
+    filter_empty: 'yes'
+    folder: Date Attributes
+    levels:
+      - unique_name: YearMonth
+      - unique_name: Quarter
+        secondary_attributes:
+          - unique_name: d_quarter_number
+            label: Quarter Number
+            dataset: dim_time_dataset
+            folder: Date Attributes
+            is_hidden: false
+            key_columns:
+              - quarter_of_year
+            name_column: quarter_of_year
+            sort_column: quarter_of_year
+      - unique_name: Month1
+        secondary_attributes:
+          - unique_name: d_month_start
+            label: Month Start
+            dataset: dim_time_dataset
+            folder: Date Attributes
+            key_columns:
+              - month
+            name_column: month
+      - unique_name: DayMonth
+        secondary_attributes:
+          - unique_name: d_day_of_week_number
+            label: Day Of Week Number
+            dataset: dim_time_dataset
+            folder: Date Attributes
+            is_hidden: false
+            key_columns:
+              - day_of_week
+            name_column: day_of_week
+            sort_column: day_of_week
+          - unique_name: d_day_of_week_name
+            label: Day Of Week Name
+            dataset: dim_time_dataset
+            folder: Date Attributes
+            is_hidden: false
+            key_columns:
+              - day_of_week_name
+            name_column: day_of_week_name
+            sort_column: day_of_week
+          - unique_name: Day_Date
+            label: Day Date
+            dataset: dim_time_dataset
+            folder: Date Attributes
+            is_hidden: false
+            key_columns:
+              - pk_date
+            name_column: pk_date
+            sort_column: pk_date
+          - unique_name: w_day_of_week_name
+            label: W Day Of Week Name
+            dataset: dim_time_dataset
+            folder: Date Attributes
+            is_hidden: false
+            key_columns:
+              - day_of_week_name
+            name_column: day_of_week_name
+            sort_column: day_of_week_name
+          - unique_name: w_day_of_week_number
+            label: W Day Of Week Number
+            dataset: dim_time_dataset
+            folder: Date Attributes
+            is_hidden: false
+            key_columns:
+              - day_of_week
+            name_column: day_of_week
+            sort_column: day_of_week
+          - unique_name: W_Day_Date
+            label: W Day Date
+            dataset: dim_time_dataset
+            folder: Date Attributes
+            is_hidden: false
+            key_columns:
+              - pk_date
+            name_column: pk_date
+            sort_column: pk_date
+      - unique_name: DateKeyDecimal
+  - unique_name: Date Week Hierarchy
+    label: Date Week Hierarchy
+    filter_empty: 'yes'
+    folder: Date Attributes
+    levels:
+      - unique_name: YearWeek
+      - unique_name: Week
+        secondary_attributes:
+          - unique_name: d_week_of_year
+            label: Week Of Year
+            dataset: dim_time_dataset
+            folder: Date Attributes
+            is_hidden: false
+            key_columns:
+              - week_of_year
+            name_column: week_of_year
+            sort_column: week_of_year
+      - unique_name: DayMonth
+      - unique_name: DateKeyDecimal
+level_attributes:
+  - unique_name: YearMonth
+    label: Year
+    description: Year level of the Standard Calendar Month Hierarchy
+    dataset: dim_time_dataset
+    key_columns:
+      - year
+    name_column: year_name
+    time_unit: year
+  - unique_name: Quarter
+    label: Quarter
+    dataset: dim_time_dataset
+    key_columns:
+      - quarter
+    name_column: quarter_name
+    sort_column: quarter
+    time_unit: quarter
+  - unique_name: Month1
+    label: Month
+    dataset: dim_time_dataset
+    key_columns:
+      - month
+    name_column: month_name
+    sort_column: month
+    time_unit: month
+  - unique_name: DayMonth
+    label: Day
+    description: Day level of standard calendar Month Hierarchy
+    allowed_calcs_for_dma:
+      - Siblings
+      - ParallelPeriod
+      - Ancestor
+      - Descendants
+      - PeriodsToDate
+    dataset: dim_time_dataset
+    is_unique_key: true
+    key_columns:
+      - pk_date
+    name_column: date_name
+    sort_column: pk_date
+    time_unit: day
+  - unique_name: YearWeek
+    label: Year
+    dataset: dim_time_dataset
+    key_columns:
+      - year
+    name_column: year_name
+    sort_column: year
+    time_unit: year
+  - unique_name: Week
+    label: Week
+    dataset: dim_time_dataset
+    key_columns:
+      - week
+    name_column: week_name
+    sort_column: week
+    time_unit: week
+  - unique_name: DayWeek
+    label: Day
+    dataset: dim_time_dataset
+    key_columns:
+      - pk_date
+    name_column: date_name
+    sort_column: pk_date
+    time_unit: week
+  - unique_name: DateKeyDecimal
+    label: Date Key Decimal
+    dataset: dim_time_dataset
+    is_hidden: true
+    key_columns:
+      - datekey
+    name_column: date_name
+    sort_column: datekey
+    time_unit: day
+type: time

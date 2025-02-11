@@ -1,0 +1,6 @@
+unique_name: Coho_Rate_Time_Line_(_Annual)_sum
+object_type: metric
+label: Coho_Rate_Time_Line_(_Annual)_sum
+calculation_method: sum
+column: Cohort Timeline (Annual)
+dataset: example_input_file_for_at_scale

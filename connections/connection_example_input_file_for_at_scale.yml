@@ -1,0 +1,6 @@
+unique_name: connection_example_input_file_for_at_scale
+object_type: connection
+label: connection_example_input_file_for_at_scale
+as_connection: databricks sql
+database: atscale_sample_data
+schema: deloitte_testing_data

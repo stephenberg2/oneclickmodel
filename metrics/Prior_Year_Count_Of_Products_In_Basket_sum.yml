@@ -1,0 +1,6 @@
+unique_name: Prior_Year_Count_Of_Products_In_Basket_sum
+object_type: metric
+label: Prior_Year_Count_Of_Products_In_Basket_sum
+calculation_method: sum
+column: Prior Year Count of Products in Basket
+dataset: example_input_file_for_at_scale

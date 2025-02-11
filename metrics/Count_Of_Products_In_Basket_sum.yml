@@ -1,0 +1,6 @@
+unique_name: Count_Of_Products_In_Basket_sum
+object_type: metric
+label: Count_Of_Products_In_Basket_sum
+calculation_method: sum
+column: Count of Products in Basket
+dataset: example_input_file_for_at_scale

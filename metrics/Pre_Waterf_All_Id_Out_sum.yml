@@ -1,0 +1,6 @@
+unique_name: Pre_Waterf_All_Id_Out_sum
+object_type: metric
+label: Pre_Waterf_All_Id_Out_sum
+calculation_method: sum
+column: PreWaterfallID_out
+dataset: example_input_file_for_at_scale

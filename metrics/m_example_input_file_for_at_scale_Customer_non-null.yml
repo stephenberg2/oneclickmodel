@@ -1,0 +1,7 @@
+unique_name: m_example_input_file_for_at_scale_Customer_non-null
+object_type: metric
+label: New Metric Example
+calculation_method: count non-null
+column: Customer
+dataset: example_input_file_for_at_scale
+format: general number

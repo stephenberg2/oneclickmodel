@@ -1,0 +1,6 @@
+unique_name: Run_Rate_Pq_sum
+object_type: metric
+label: Run_Rate_Pq_sum
+calculation_method: sum
+column: run_rate_pq
+dataset: example_input_file_for_at_scale

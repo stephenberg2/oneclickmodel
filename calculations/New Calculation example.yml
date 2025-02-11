@@ -1,0 +1,5 @@
+unique_name: New Calculation example
+object_type: metric_calc
+label: New Calculation example
+expression: '[Measures].[Arr_sum]+50'
+is_hidden: false
